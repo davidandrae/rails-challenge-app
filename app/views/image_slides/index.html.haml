@@ -1,0 +1,13 @@
+.container.pt-4
+  .row
+    .col-sm.text-center
+      %a.btn.btn-secondary.previous PREVIOUS
+    .col-sm.text-center
+      - @slides.each_with_index do |slide, index|
+        .slide{id: "slide-no-#{index}"}
+          %img{class: "text-center", src: slide[:imageRef]}
+          %p 
+            = slide[:title]
+          %a.btn.btn-primary{href: slide[:href]} CLICK ME
+    .col-sm.text-center
+      %a.btn.btn-secondary.next NEXT

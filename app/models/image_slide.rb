@@ -1,0 +1,2 @@
+class ImageSlide < ApplicationRecord
+end
